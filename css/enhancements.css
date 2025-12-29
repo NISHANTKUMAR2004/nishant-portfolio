@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= GLOBAL TEXT POLISH ================= */
+.font-premium {
+  @apply font-heading tracking-wide text-white;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-accent
+         bg-clip-text text-transparent;
+}
+
+/* ================= SECTION HEADINGS ================= */
+.section-title {
+  @apply text-4xl md:text-5xl font-bold text-center
+         font-heading mb-3;
+}
+
+.section-subtitle {
+  @apply uppercase text-xs tracking-widest
+         text-gray-400 text-center mb-20;
+}
+
+/* ================= CARD STYLES ================= */
+.card {
+  @apply bg-card border border-white/10 rounded-xl
+         shadow-lg transition duration-300;
+}
+
+.card-hover {
+  @apply hover:-translate-y-2 hover:shadow-2xl;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  @apply px-8 py-3 rounded-full bg-accent
+         text-black font-semibold
+         hover:bg-primary transition;
+}
+
+.btn-outline {
+  @apply px-6 py-3 rounded-full border
+         border-neon text-neon
+         hover:bg-neon hover:text-black transition;
+}
+
+/* ================= PROJECT OVERLAY ================= */
+.project-overlay-base {
+  @apply absolute inset-0 bg-black/80
+         flex flex-col justify-center items-center
+         text-center opacity-0 transition duration-300;
+}
+
+.project-hover:hover .project-overlay-base {
+  @apply opacity-100;
+}
+
+/* ================= IMAGE HOVER EFFECT ================= */
+.image-hover {
+  @apply transition duration-300;
+}
+
+.image-hover:hover {
+  @apply scale-105;
+}
+
+/* ================= LINK HOVER ================= */
+.link-hover {
+  @apply text-primary transition;
+}
+
+.link-hover:hover {
+  @apply underline text-accent;
+}
